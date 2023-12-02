@@ -1,210 +1,250 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
+    font-family: sans-serif;
     box-sizing: border-box;
-    background-color: #f8f8f8;
 }
 
-header {
-    background-color: #000000;
+body {
+    background: black;
     color: white;
-    text-align: center;
-    padding: 12px 18px;
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://github.com/achint-2093/techuntried/blob/main/images/cover.png?raw=true);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.logo img {
-    max-height: 45px; /* Adjust the height as needed */
+.logo {
+    width: 140px;
 }
 
-.title {
-    flex: 1;
-    text-align: left;
-    margin-left: 20px;
-    font-size: 1.5em;
-}
-
-nav ul {
+nav ul li {
+    display: inline-block;
     list-style: none;
-    margin: 0;
-    padding: 0;
+    margin: 10px 20px;
 }
 
-nav li {
-    display: inline;
-    margin-left: 20px;
-}
-
-nav a {
-    text-decoration: none;
+nav ul li a {
     color: white;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+nav ul li a:hover {
+    padding: 5px;
+    border-radius: 5px;
+    color: black;
+    background: rgb(255, 255, 255);
+    transition: .5s;
+}
+nav .fa-solid{
+    display: none;
+}
+
+.header-text {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.download-circle {
+    margin-top: 10px;
+}
+
+.download-circle a {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #007BFF;
+    /* Change the color as needed */
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    color: #ffcc00;
+.download-circle a:hover {
+    background-color: #0056b3;
+    /* Change the hover color as needed */
 }
 
-section {
-    padding: 40px 20px;
-    text-align: center;
+/* ---about--- */
+
+#about {
+    padding: 80px 0;
 }
 
-.feature-section {
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.feature-content {
+.row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
-}
-
-.feature-text {
-    max-width: 600px;
-    text-align: left;
-}
-
-.feature-text h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.feature-text p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-.feature-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    /* Set a specific width for the image */
-    width: 300px; /* Adjust as needed */
-    /* Set a specific height for the image */
-    max-height: 400px; /* Adjust as needed */
-}
-
-/* ... (previous CSS code) ... */
-
-.app-section {
-    background-color: #f8f8f8;
-    padding: 40px 20px;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.section-header h2 {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.app-container {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
     flex-wrap: wrap;
-    gap: 20px;
+    padding: 40px;
 }
 
-.app {
-    flex: 0 0 calc(33.33% - 20px);
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
+.about-col-1 {
+    flex-basis: 35%;
 }
 
-.app:hover {
-    transform: scale(1.05);
+.about-col-1 img {
+    width: 100%;
 }
 
-.app img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+.about-col-2 {
+    flex-basis: 60%;
+
 }
 
-.app-info {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-}
-
-.app h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.app p {
-    font-size: 1.1em;
-    color: #555;
+.about-col-2 p {
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
-.app a {
-    align-self: flex-end;
-    display: inline-block;
-    background-color: #333;
+.subtitle {
+    font-size: 60px;
+    font-weight: 600;
     color: white;
+    margin-bottom: 20px;
+}
+
+/* ----services--- */
+#services {
+    padding: 30px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.card {
+    background: #17161c;
+    padding: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.services-list div img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.card div {
+    margin-top: 20px;
+}
+
+.download-link {
+
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    /* Change the color as needed */
+    color: #fff;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.app a:hover {
-    background-color: #ffcc00;
+.download-link:hover {
+    background-color: #0056b3;
+    /* Change the hover color as needed */
 }
 
-/* ... (remaining CSS code) ... */
 
+/* ---footer--- */
 
-footer {
-    background-color: #333;
+.footer {
+    background-color: #000000;
     color: white;
-    padding: 20px;
+    padding: 10px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: left;
     flex-wrap: wrap;
-}
-
-.footer-section {
-    max-width: 300px;
+    padding: 10px 10px;
 }
 
 .footer-section h3 {
-    font-size: 1.8em;
+    font-size: 1.2em;
     margin-bottom: 10px;
-}
-
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 20px;
     padding-top: 10px;
-    border-top: 1px solid #555;
-    font-size: 1.2em;
+    border-top: 1px solid #908b8b;
+}
+
+
+/* ----css small screen--- */
+
+@media only screen and (max-width:600px) {
+
+    #header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://github.com/achint-2093/techuntried/blob/main/images/cover.png?raw=true);
+        background-size: cover;
+        background-position: center;
+    }
+
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: red;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        height: 100vh;
+        width: 200px;
+        padding-top: 50px;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position:absolute;
+        top: 25px;
+        left:25px ;
+    }
 }
